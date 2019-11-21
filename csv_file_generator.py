@@ -19,6 +19,7 @@ def build_data_list(columns):
         second_name = generate_string(FOR_NAMES, 10)
         long_field = generate_string(DIGITS, 10)
         float_field = str(round(float(random.randint(0, 99)/7), 4))
+        # imitate random value: true, false or empty string
         if n % 7 == 0:
             bool_flag = ""
         else:
@@ -52,4 +53,5 @@ def create_file_and_write(data_list, file_type):
 
 
 if __name__ == "__main__":
+    # generate 100 lines file, adjust amount of line as needed
     create_file_and_write(build_data_list(100), ".csv")
